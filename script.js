@@ -2,9 +2,22 @@
 //determine the size of the squares
 
 let color = "black";
+let click = false;
 
 document.addEventListener("DOMContentLoaded", function() {
     createContainer(16);
+
+    document.querySelector("body").addEventListener('click', function(e) {
+        if (e.target.tagName != "BUTTON") {
+            click = !click
+            let draw = document.querySelector("#draw");
+            if (click) {
+                draw.innerHTML = "Now you draw!";
+            } else {
+                draw.innerHTML = "Draw inside the square."
+            }
+        }
+    })
 
     let btn_popup = document.querySelector("#popup");
     btn_popup.addEventListener('click', function() {
@@ -46,10 +59,13 @@ function userSelection() {
 }
 
 function colorDiv() {
+    if(click) {
+
     if (color == "color") {
         this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
     } else {
         this.style.backgroundColor = 'black';
+    }
     }
 }
 
