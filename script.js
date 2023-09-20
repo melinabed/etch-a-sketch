@@ -63,7 +63,10 @@ function colorDiv() {
 
     if (color == "color") {
         this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    } else {
+    } else if (color == "white") {
+        this.style.backgroundColor = "white";
+    }
+     else {
         this.style.backgroundColor = 'black';
     }
     }

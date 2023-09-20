@@ -13,10 +13,10 @@
     <body>
 
         <h1>Etch A Sketch</h1>
-        <div class="header">
+        <p class="header">
             <h5>Select the size</h5>
             <button id="popup">Select</button>
-        </div>
+        </p>
 
         <p id="message"></p>
         <p id ="draw"></p>
@@ -24,11 +24,12 @@
         <div class="container">
         </div>
 
-        <div class="footer">
+        <p class="footer">
             <button class="black-btn" onclick="setColor('black')">Black</button>
             <button class="color-btn" onclick="setColor('color')">Color</button>
-            <button class="erase-btn" onclick="resetContainer()">Erase</button>
-        </div>
+            <button class="erase-btn" onclick="setColor('white')">Erase</button>
+            <button class="reset-btn" onclick="resetContainer()">Reset</button>
+        </p>
 
     </body>
 </html>
